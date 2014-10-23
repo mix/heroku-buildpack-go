@@ -192,7 +192,8 @@ else
     go get "${FLAGS[@]}" ./...
 fi
 
-rm -rf $build/.heroku
+# Don't know why this was done but we need this dir to persist
+# rm -rf $build/.heroku
 
 mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
